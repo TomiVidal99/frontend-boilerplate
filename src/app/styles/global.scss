@@ -1,7 +1,8 @@
-@import 'variables.scss';
+@use "sass:map";
+@import "variables.scss";
 
 html {
-  font-size: value($font-sizes, default);
+  font-size: map.get($font-sizes, default);
 }
 
 body {
@@ -12,7 +13,8 @@ body {
   padding: 0;
 }
 
-*, *::before, *::after {
-  block-size: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-

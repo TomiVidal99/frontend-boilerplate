@@ -1,6 +1,9 @@
+@use "sass:map";
+@import "global.scss";
+
 .app {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -8,5 +11,25 @@
   align-items: center;
 
   font-size: 2rem;
-  color: value($color-basic, darker);
+  color: map.get($color-basic, darkest);
+
+  background-color: map.get($primary, light);
+}
+
+.logo-container img {
+  animation-name: animateIt;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate;
+  animation-delay: 3s;
+}
+
+@keyframes animateIt {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

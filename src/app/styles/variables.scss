@@ -1,18 +1,22 @@
 $font-sizes: (
-  default: 16px,
+  "default": 16px,
+);
+
+$primary: (
+  "light": #984141,
 );
 
 $color-basic: (
-  brightest: #ffffff,
-  brighter: #f1f1f1,
-  bright: #dddddd,
-  dark: #cccccc,
-  darker: #aaaaaa,
-  darkest: #444444,
+  "brightest": #ffffff,
+  "brighter": #f1f1f1,
+  "bright": #dddddd,
+  "dark": #cccccc,
+  "darker": #aaaaaa,
+  "darkest": #1f1e1e,
 );
 
 $break-points: (
-  mobile: 500px,
-  tablet: 768px,
-  web: 1028px
+  "mobile": 500px,
+  "tablet": 768px,
+  "web": 1028px,
 );

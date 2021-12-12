@@ -1,4 +1,7 @@
-var path = require("path");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const port = process.env.PORT || 3000;
 
 var config = {
   /*
@@ -6,15 +9,21 @@ var config = {
    * recursively go through every "require" statement in app.ts and
    * efficiently build out the application's dependency tree.
    */
-  entry: ["./src/app.tsx"],
+  entry: ["./src/index.js"],
+
+  /*
+   * devtool will create source maps to help you with debugging of your application.
+   * There are several types of source maps and this particular map (inline-source-map)
+   * is to be used only in development. (Refer to the docs for more options).
+   */
+  devtool: "inline-source-map",
 
   /*
    * The combination of path and filename tells Webpack what name to give to
    * the final bundled JavaScript file and where to store this file.
    */
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "bundle.js"
+    filename: "bundle.[hash].js",
   },
 
   /*
@@ -23,7 +32,7 @@ var config = {
    * in your code.
    */
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js"]
+    extensions: ["", ".ts", ".tsx", ".js"],
   },
 
   module: {
@@ -36,32 +45,87 @@ var config = {
      */
     rules: [
       {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
-        include: [
-          path.resolve(__dirname, "src")
-        ],
+        include: [path.resolve(__dirname, "src")],
       },
+
+      // load images
       {
-        test: /\.svg$/,
-        use: 'svg-inline-loader',
-        include: [
-          path.resolve(__dirname, 'src/assets')
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 20000,
+              name: "static/media/[name].[hash:8].[ext]",
+            },
+          },
         ],
+        include: [path.resolve(__dirname, "src/assets")],
       },
+
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader'],
-        include: [
-          path.resolve(__dirname, 'src/app/styles')
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true, // modules gives me the ability to import the modules from the React Components.
+
+              localsConvention: "camelCase", // camelCase allows us to write classes like this: .home-button {...}
+              sourceMap: true,
+            },
+          },
         ],
+        include: [path.resolve(__dirname, "src/app/styles")],
       },
-    ]
+
+      // load sass files
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+        include: [path.resolve(__dirname, "src/app/styles")],
+      },
+    ],
   },
 
-  // specifies weather it's on production mode or development mode.
-  node: process.env.NODE_ENV === 'production' ? true : false,
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+      favicon: "public/favicon.ico",
+    }),
+  ],
 
+  /*
+   * development server configuration
+   */
+  devServer: {
+    host: "localhost",
+    port: port,
+    historyApiFallback: true,
+    open: true,
+  },
+
+  /*
+   * specifies weather it's on production mode or development mode.
+   */
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
 };
 
 module.exports = config;
