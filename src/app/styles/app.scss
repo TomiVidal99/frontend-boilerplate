@@ -1,0 +1,12 @@
+.app {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: value($color-basic, darker);
+}
