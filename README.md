@@ -19,8 +19,8 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
-- [ ] Add images to this readme.
 - [ ] Clean the log on server update.
+- [x] Add images to this readme.
 - [x] Optimize production.
 - [x] Add a map of the file structure. Maybe adapt it for Redux?
 - [x] Add react router basic structure.
