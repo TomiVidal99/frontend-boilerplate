@@ -23,7 +23,7 @@ var config = {
    * the final bundled JavaScript file and where to store this file.
    */
   output: {
-    filename: "bundle.[hash].js",
+    filename: "bundle.[fullhash].js",
   },
 
   /*
@@ -120,6 +120,10 @@ var config = {
     port: port,
     historyApiFallback: true,
     open: true,
+    client: {
+      logging: "info",
+      progress: true,
+    },
   },
 
   /*

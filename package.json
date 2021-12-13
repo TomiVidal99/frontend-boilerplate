@@ -4,7 +4,7 @@
   "description": "Boilerplate for front end designs, includes webpack, typescript, react and sass. It's all ready for you to just jumpt straight to the code. 😄",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --host 0.0.0.0",
     "build:linux": "NODE_ENV='production' webpack",
     "build:windows": "set NODE_ENV=production&&webpack"
   },

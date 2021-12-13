@@ -1,0 +1,23 @@
+.file-structure {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+}
+
+.file-structure-image {
+  width: 65vw;
+  height: auto;
+  margin: 2rem 0;
+  transition: all 1s ease-in;
+}
+
+.file-structure-image:hover {
+  width: 95vw;
+  height: auto;
+}

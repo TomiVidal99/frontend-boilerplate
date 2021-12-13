@@ -1,19 +1,23 @@
 import * as React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import the style for the entire app
-import "./styles/app.scss";
+import "./styles/global.scss";
 
-// import the svg and images in your files like this
-import logo from "./../assets/logo.svg";
+// components
+import Home from "./components/Home";
+import FileStructure from "./components/FileStructure";
 
 const App = () => {
   return (
-    <div className="app">
-      <h1>Welcome to the boilerplate for your front end projects!</h1>
-      <div className="logo-container">
-        <img src={logo} alt="logo" />
+    <BrowserRouter>
+      <div id="app">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/file-structure" element={<FileStructure />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 

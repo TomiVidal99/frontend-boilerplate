@@ -1,8 +1,9 @@
 @use "sass:map";
+
 @import "variables.scss";
 
 html {
-  font-size: map.get($font-sizes, default);
+  font-size: $root-font-size;
 }
 
 body {
@@ -18,3 +19,28 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+#app {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: map.get($primary, light);
+}
+
+.link {
+  font-size: 1.6rem;
+  margin: 2rem 0;
+  color: map.get($color-basic, darker);
+}
+.link:after {
+  content: "🔗";
+  padding: 0.3em;
+  font-size: 1.2rem;
+}
+
+/*
+ * IMPORT ALL OF YOUR STYLING FILES DOWN HERE
+ */
+
+@import "home.scss";
+@import "file-structure.scss";
