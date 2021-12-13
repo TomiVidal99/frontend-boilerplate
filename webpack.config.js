@@ -121,8 +121,11 @@ var config = {
     historyApiFallback: true,
     open: true,
     client: {
-      logging: "info",
-      progress: true,
+      logging: "error",
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
     },
   },
 
