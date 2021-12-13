@@ -1,6 +1,6 @@
 # Front End Boilerplate
 
-- This boilerplate it's your base for your front end projects. The intention it's for it to be a simple, highly readable and modifiable as a strong intial ground for you to start building web applications.
+_This boilerplate it's your base for your front end projects. The intention it's for it to be a simple, highly readable and modifiable as a strong intial ground for you to start building web applications._
 
 ## File Structure
 
@@ -15,7 +15,7 @@
 
 ## Why Another Boilerplate
 
-- Basically i was looking for a simple boilerplate to get me started on my projects and even though i was able to find many the complexity of them made it so hard get setup (controversial right?). And even after setting everything up and ended coding i was about to deploy when the code wouldn't build for production, and after (many) hours of debugging some others people code i was not able to get it to work, and so i decided to make this boilerplate.
+_Basically i was looking for a simple boilerplate to get me started on my projects and even though i was able to find many the complexity of them made it so hard get setup (controversial right?). And even after setting everything up and ended coding i was about to deploy when the code wouldn't build for production, and after (many) hours of debugging some others people code i was not able to get it to work, and so i decided to make this boilerplate._
 
 ## TODO
 
@@ -27,4 +27,4 @@
 
 ## Contributors
 
-- @TomiVidal99 [https://tomas-vidal.xyz]
+**@TomiVidal99 [https://tomas-vidal.xyz]**
