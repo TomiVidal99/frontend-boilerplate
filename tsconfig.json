@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "moduleResolution": "node",
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
     "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "./build/",
@@ -9,5 +15,6 @@
     "target": "ES5",
     "esModuleInterop": true
   },
-  "exclude": ["node_modules", "typings/browser.d.ts", "typings/browser"]
+  "exclude": ["node_modules", "typings/browser.d.ts", "typings/browser"],
+  "include": ["src"]
 }

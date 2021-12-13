@@ -1,9 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 
 const port = process.env.PORT || 3000;
 
+const isProd = process.env.NODE_ENV === "production";
+
 var config = {
+  /*
+   * specifies weather it's on production mode or development mode.
+   */
+  mode: isProd ? "production" : "development",
+
   /*
    * app.ts represents the entry point to your web application. Webpack will
    * recursively go through every "require" statement in app.ts and
@@ -32,7 +40,7 @@ var config = {
    * in your code.
    */
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 
   module: {
@@ -51,7 +59,7 @@ var config = {
       },
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: "babel-loader",
         include: [path.resolve(__dirname, "src")],
       },
 
@@ -111,15 +119,20 @@ var config = {
       favicon: "public/favicon.ico",
     }),
   ],
+};
 
-  /*
-   * development server configuration
-   */
-  devServer: {
+if (isProd) {
+  config.optimization = {
+    minimizer: [new TerserWebpackPlugin()],
+  };
+} else {
+  config.devServer = {
     host: "localhost",
     port: port,
     historyApiFallback: true,
     open: true,
+    hot: true,
+    compress: true,
     client: {
       logging: "error",
       overlay: {
@@ -127,12 +140,7 @@ var config = {
         warnings: false,
       },
     },
-  },
-
-  /*
-   * specifies weather it's on production mode or development mode.
-   */
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
-};
+  };
+}
 
 module.exports = config;

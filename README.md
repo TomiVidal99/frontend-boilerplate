@@ -4,7 +4,7 @@ _This boilerplate it's your base for your front end projects. The intention it's
 
 ## Status
 
-- In Development. NOT READY TO USE YET.
+- In Development. READY TO USE.
 
 ## File Structure
 
@@ -33,9 +33,9 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
-- [ ] Fix types, currently boilerplate not working because of this.
 - [ ] Improve the File Structure display.
 - [ ] Clean the log on server update.
+- [x] Fix types, currently boilerplate not working because of this.
 - [x] Add images to this readme.
 - [x] Optimize production.
 - [x] Add a map of the file structure. Maybe adapt it for Redux?
