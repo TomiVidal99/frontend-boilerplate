@@ -1,4 +1,4 @@
-## Front End Boilerplate
+# Front End Boilerplate
 
 - This boilerplate it's your base for your front end projects. The intention it's for it to be a simple, highly readable and modifiable as a strong intial ground for you to start building web applications.
 
