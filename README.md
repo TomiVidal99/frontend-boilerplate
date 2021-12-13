@@ -2,6 +2,10 @@
 
 _This boilerplate it's your base for your front end projects. The intention it's for it to be a simple, highly readable and modifiable as a strong intial ground for you to start building web applications._
 
+## Status
+
+- In Development. NOT READY TO USE YET.
+
 ## File Structure
 
 ![Project File Structure](./src/assets/frontend-boilerplate-file-structure.png)
@@ -29,6 +33,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
+- [ ] Fix types, currently boilerplate not working because of this.
 - [ ] Improve the File Structure display.
 - [ ] Clean the log on server update.
 - [x] Add images to this readme.
