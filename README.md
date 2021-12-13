@@ -15,7 +15,7 @@ _This boilerplate it's your base for your front end projects. The intention it's
 
 ## Usage
 
-### Develpment
+### Development
 
 You just need to run `yarn start` to start the development server (by default will use the port 3000 and host it on the local network, you can change that in the webpack.config.js).
 
