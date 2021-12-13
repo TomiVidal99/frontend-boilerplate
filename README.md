@@ -29,6 +29,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
+- [ ] Improve the File Structure display.
 - [ ] Clean the log on server update.
 - [x] Add images to this readme.
 - [x] Optimize production.
