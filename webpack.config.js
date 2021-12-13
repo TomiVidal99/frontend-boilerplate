@@ -88,9 +88,6 @@ var config = {
             loader: "css-loader",
             options: {
               modules: true, // modules gives me the ability to import the modules from the React Components.
-
-              localsConvention: "camelCase", // camelCase allows us to write classes like this: .home-button {...}
-              sourceMap: true,
             },
           },
         ],
