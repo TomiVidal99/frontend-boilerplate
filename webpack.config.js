@@ -31,6 +31,7 @@ var config = {
    * the final bundled JavaScript file and where to store this file.
    */
   output: {
+    publicPath: "auto",
     filename: "bundle.[fullhash].js",
   },
 
