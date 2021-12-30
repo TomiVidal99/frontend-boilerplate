@@ -33,7 +33,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
-- [ ] Improve the File Structure display.
+- [ ] Improve the File Structure and it's display.
 - [ ] Clean the log on server update.
 - [x] Fix types, currently boilerplate not working because of this.
 - [x] Add images to this readme.
