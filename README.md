@@ -33,6 +33,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
+- [ ] Add webpack loader for inline component svg.
 - [ ] Improve the File Structure and it's display.
 - [ ] Clean the log on server update.
 - [x] Fix types, currently boilerplate not working because of this.
