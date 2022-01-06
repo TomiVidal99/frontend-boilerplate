@@ -13,6 +13,7 @@ _This boilerplate it's your base for your front end projects. The intention it's
 ## Features
 
 - React.
+- Typescript.
 - SASS.
 - Webpack.
 - live loader.
