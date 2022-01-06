@@ -42,6 +42,14 @@ var config = {
    */
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
+    alias: {
+      "@components": path.resolve(__dirname, "./src/app/components/"),
+      "@pages": path.resolve(__dirname, "./src/app/pages/"),
+      "@styles": path.resolve(__dirname, "./src/app/styles/"),
+      "@utils": path.resolve(__dirname, "./src/app/utils/"),
+      "@assets": path.resolve(__dirname, "./src/assets/"),
+      "@icons": path.resolve(__dirname, "./src/assets/icons/"),
+    },
   },
 
   module: {
