@@ -34,10 +34,10 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
-- [ ] Add path 'alias' to tsconfig.json: "@*" = "./components/*" and "@/*" = "./*".
-- [ ] Add webpack loader for inline component svg.
+- [ ] Add path 'alias' to tsconfig.json: "@_" = "./components/_" and "@/_" = "./_".
 - [ ] Improve the File Structure and it's display.
 - [ ] Clean the log on server update.
+- [x] Add webpack loader for inline component svg.
 - [x] Fix types, currently boilerplate not working because of this.
 - [x] Add images to this readme.
 - [x] Optimize production.
