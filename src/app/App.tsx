@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/global.scss";
 
 // components
-import Home from "./components/Home";
-import FileStructure from "./components/FileStructure";
+import Home from "@pages/Home";
+import FileStructure from "@pages/FileStructure";
 
 const App = () => {
   return (
