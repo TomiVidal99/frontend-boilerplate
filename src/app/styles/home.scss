@@ -10,7 +10,7 @@
   color: map.get($color-basic, darkest);
 }
 
-.logo-container img {
+.logo-container svg {
   animation-name: animateIt;
   animation-duration: 20s;
   animation-iteration-count: infinite;

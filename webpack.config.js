@@ -66,7 +66,7 @@ var config = {
 
       // load images
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: "url-loader",
@@ -77,6 +77,19 @@ var config = {
           },
         ],
         include: [path.resolve(__dirname, "src/assets")],
+      },
+
+      // load inline svgs
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "react-svg-loader",
+            //options: {
+            //jsx: true // true outputs JSX tags
+            //}
+          },
+        ],
       },
 
       {
