@@ -4,7 +4,7 @@ _This boilerplate it's your base for your front end projects. The intention it's
 
 ## Status
 
-- In Development. READY TO USE.
+- Ready to use.
 
 ## File Structure
 
