@@ -34,6 +34,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
+- [ ] Improve Routing by adding a RoutesContainer component.
 - [ ] Improve the File Structure and it's display.
 - [ ] Clean the log on server update.
 - [x] Add path 'alias' to tsconfig.json: "@_" = "./components/_" and "@/_" = "./_".
