@@ -34,6 +34,8 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
+- [ ] Add branch with tailwind.
+- [ ] Add basic routing system with Layout component.
 - [ ] Improve Routing by adding a RoutesContainer component.
 - [ ] Improve the File Structure and it's display.
 - [ ] Clean the log on server update.
