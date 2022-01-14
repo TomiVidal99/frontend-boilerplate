@@ -28,7 +28,7 @@ You just need to run `yarn start` to start the development server (by default wi
 
 ### Production
 
-Run the command `yarn build:linux` if you're in linux or mac. If you're on windows use `yarn build:windows`. The output of these commands will be located at the /dist folder.
+Run the command `yarn build:linux` if you're in linux or mac. If you're on windows use `yarn build:windows`. The output of these commands will be located at the /build folder.
 
 ## Why Another Boilerplate
 
