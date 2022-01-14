@@ -8,9 +8,7 @@
     "build:linux": "cross-env NODE_ENV='production' webpack",
     "deploy:linux": "cross-env NODE_ENV='production' webpack & netlify deploy",
     "build:windows": "set NODE_ENV=production&&webpack",
-    "build:tailwind": "tailwindcss build src/index.css -o src/app/styles/tailwind.output.css",
-    "prestart": "npm run build:tailwind",
-    "prebuild": "npm run build:tailwind"
+    "build:tailwind": "tailwindcss build src/index.css -o src/app/styles/tailwind.output.css"
   },
   "keywords": [
     "boilerplate",
