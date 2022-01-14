@@ -14,9 +14,11 @@ _This boilerplate it's your base for your front end projects. The intention it's
 
 - React.
 - Typescript.
+- Tailwind.
 - SASS.
 - Webpack.
 - live loader.
+- Good File Structure.
 
 ## Usage
 
@@ -34,18 +36,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
-- [ ] Add branch with tailwind.
-- [ ] Add basic routing system with Layout component.
-- [ ] Improve Routing by adding a RoutesContainer component.
-- [ ] Improve the File Structure and it's display.
 - [ ] Clean the log on server update.
-- [x] Add path 'alias' to tsconfig.json: "@_" = "./components/_" and "@/_" = "./_".
-- [x] Add webpack loader for inline component svg.
-- [x] Fix types, currently boilerplate not working because of this.
-- [x] Add images to this readme.
-- [x] Optimize production.
-- [x] Add a map of the file structure. Maybe adapt it for Redux?
-- [x] Add react router basic structure.
 
 ## Contributors
 

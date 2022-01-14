@@ -1,3 +1,5 @@
+/*THIS FILE IT'S JUST TO IMPORT TAILWIND DEPENDENCIES*/
+/*YOU CAN ADD CSS UNDER HERE BUT IT'S RECOMMENDED TO USE THE SASS FILES*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

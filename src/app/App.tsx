@@ -1,21 +1,20 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { ReactElement } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 // import the style for the entire app
 import "./styles/global.scss";
 
 // components
-import Home from "@pages/Home";
-import FileStructure from "@pages/FileStructure";
+import PagesContainer from "@pages/PagesContainer";
+import Layout from "@components/Layout";
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <BrowserRouter>
-      <div id="app">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/file-structure" element={<FileStructure />} />
-        </Routes>
+      <div id="app" className="h-screen w-screen bg-stone-300">
+        <Layout>
+          <PagesContainer />
+        </Layout>
       </div>
     </BrowserRouter>
   );

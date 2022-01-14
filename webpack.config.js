@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { HotModuleReplacementPlugin } = require("webpack");
 
 const port = process.env.PORT || 3000;
 
@@ -31,6 +33,7 @@ var config = {
    * the final bundled JavaScript file and where to store this file.
    */
   output: {
+    path: path.resolve(__dirname, "build"),
     publicPath: "auto",
     filename: "bundle.[fullhash].js",
   },
@@ -47,6 +50,7 @@ var config = {
       "@pages": path.resolve(__dirname, "./src/app/pages/"),
       "@styles": path.resolve(__dirname, "./src/app/styles/"),
       "@utils": path.resolve(__dirname, "./src/app/utils/"),
+      "@hooks": path.resolve(__dirname, "./src/app/hooks/"),
       "@assets": path.resolve(__dirname, "./src/assets/"),
       "@icons": path.resolve(__dirname, "./src/assets/icons/"),
     },
@@ -100,20 +104,16 @@ var config = {
         ],
       },
 
+      // load the css and compile with tailwind classes.
       {
-        test: /\.css$/,
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
+        exclude: /node_modules/,
         use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true, // modules gives me the ability to import the modules from the React Components.
-            },
-          },
+          !isProd ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
         ],
-        include: [path.resolve(__dirname, "src/app/styles")],
       },
 
       // load sass files
@@ -137,7 +137,17 @@ var config = {
       template: "public/index.html",
       favicon: "public/favicon.ico",
     }),
-  ],
+    new HotModuleReplacementPlugin(),
+  ].concat(
+    isProd
+      ? [
+          new MiniCssExtractPlugin({
+            filename: "[name].bundle.css",
+            chunkFilename: "[id].css",
+          }),
+        ]
+      : []
+  ),
 };
 
 if (isProd) {
