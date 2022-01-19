@@ -160,7 +160,6 @@ if (isProd) {
     port: port,
     historyApiFallback: true,
     open: true,
-    hot: true,
     compress: true,
     client: {
       logging: "error",
