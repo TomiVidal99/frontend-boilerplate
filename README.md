@@ -36,6 +36,7 @@ _Basically i was looking for a simple boilerplate to get me started on my projec
 
 ## TODO
 
+- [ ] Add eslint standard.
 - [ ] Add React auto import.
 - [ ] Clean the log on server update.
 
